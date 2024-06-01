@@ -1,0 +1,7 @@
+{
+  "name": "SPI-Report-App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
