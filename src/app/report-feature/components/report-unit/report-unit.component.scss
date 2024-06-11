@@ -1,0 +1,12 @@
+
+.report-unit-container {
+  background: transparent;
+
+  p, span, div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to display */
+    -webkit-box-orient: vertical;
+  }
+}

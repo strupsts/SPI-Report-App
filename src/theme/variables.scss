@@ -1,2 +1,26 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+:root {
+  --ion-color-warning: #ffc409; /* Ваш основной цвет предупреждения */
+  --ion-color-warning-rgb: 255, 196, 9;
+
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #ffc409 !important; /* Оттенок для светлой темы */
+  --ion-color-warning-tint: #ffc409 !important; /* Тон для светлой темы */
+
+  --ion-color-darkblue: #2c343c;
+  --ion-color-darkblue-rgb: 255, 87, 34;
+  --ion-color-darkblue-contrast: #ffffff;
+  --ion-color-darkblue-contrast-rgb: 0, 0, 0;
+  --ion-color-darkblue-shade: #2c343c;
+  --ion-color-darkblue-tint: #2c343c;
+
+  .ion-color-darkblue {
+    --ion-color-base: var(--ion-color-darkblue);
+    --ion-color-base-rgb: var(--ion-color-darkblue-rgb);
+    --ion-color-contrast: var(--ion-color-darkblue-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-darkblue-contrast-rgb);
+    --ion-color-shade: var(--ion-color-darkblue-shade);
+    --ion-color-tint: var(--ion-color-darkblue-tint);
+  }
+}

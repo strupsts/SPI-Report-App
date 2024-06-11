@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {StarterService} from "./core/services/starter.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private starterService: StarterService) {
+    this.starterService.initializeApp();
+  }
 }

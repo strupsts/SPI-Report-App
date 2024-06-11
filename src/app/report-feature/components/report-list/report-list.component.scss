@@ -1,0 +1,51 @@
+* {
+  overflow: auto;
+}
+.regarding-element {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+ion-fab {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+.unit-container {
+
+
+}
+ion-item {
+  --background: #2c343c;
+  background: #2c343c;
+  color: #ecedf1;
+  padding: 10px 0;
+}
+
+.item-options-ios.item-options-end {
+  border-bottom-width: 0;
+}
+
+ion-item-sliding {
+  margin: 10px 0;
+  padding: 0 10px;
+  border-radius: 2px;
+}
+
+ion-item-options {
+  padding: 0 10px;
+  ion-item-option {
+    margin: 0 5px;
+  }
+}
+
+.item-sliding-active-slide ion-item-options {
+  margin-top: 1px;
+  height: calc(100% - 2px);
+}
+spi-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}

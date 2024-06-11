@@ -1,0 +1,60 @@
+
+<spi-header [headerTitle]="mode === 'add' ? 'Create New Record' : 'Edit Record'"
+            [headerColor]="mode === 'add' ? 'primary' : 'tertiary'"
+            [modalMode]="mode" ></spi-header>
+
+<ion-content>
+  <form [formGroup]="reportForm" (ngSubmit)="onSubmit()">
+    <div class="header-wrapper"></div>
+    <ion-list [inset]="true" >
+      <ion-item color="darkblue" (click)="modalTime.present()">
+        <ion-label class="font-color-white">Time</ion-label>
+        <ion-datetime-button  name="time" datetime="datetime" ></ion-datetime-button>
+      </ion-item>
+    </ion-list>
+
+    <ion-list [inset]="true">
+      <ion-item color="darkblue">
+        <ion-textarea labelPlacement="floating" rows="5" formControlName="action">
+          <div slot="label" class="font-color-white" >Comments</div>
+        </ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <ion-list [inset]="true" style="background: transparent">
+      <ion-button class="f-medium"
+                  expand="block"
+                  type="submit" [disabled]="!reportForm.valid"
+                  [color]="mode === 'add' ? 'primary' : 'tertiary'"
+      >
+        Submit
+      </ion-button>
+    </ion-list>
+
+  </form>
+
+
+</ion-content>
+
+<ion-modal [keepContentsMounted]="true" #modalTime style="--width: 100%">
+  <ng-template>
+    <ion-datetime [showDefaultButtons]="true"
+                  id="datetime"
+                  [min]="yesterdayDate" [max]="todayDate"
+                  hourCycle="h23"
+                  [formatOptions]="{
+                    date: {
+                      month: 'short',
+                      day: '2-digit',
+                    },
+                    time: {
+                      hour: '2-digit',
+                      minute: '2-digit',
+                    },
+                  }"
+    >
+    </ion-datetime>
+  </ng-template>
+</ion-modal>
+
+

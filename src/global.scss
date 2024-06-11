@@ -25,6 +25,8 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+@import "assets/fonts/fonts.scss";
+
 /**
  * Ionic Dark Mode
  * -----------------------------------------------------
@@ -34,4 +36,16 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
+
+ion-content {
+  --background: #1c2028;
+  --color: #d7dee3;
+}
+
+.f-medium {
+  font-family: Montserrat-Medium, sans-serif;
+}
+.f-regular {
+  font-family: Montserrat-Regular, sans-serif;
+}
+

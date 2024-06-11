@@ -1,0 +1,41 @@
+
+
+
+  <ion-content >
+    <spi-header  headerTitle="SPI Security" headerColor="warning"></spi-header>
+   <div class="regarding-element">
+
+    <ion-item-sliding *ngFor="let report of reportsList$ | async" #slidingItem>
+      <ion-item class="unit-container" lines="none" (click)="toggleSlider(slidingItem)">
+        <spi-report-unit [report]="report" ></spi-report-unit>
+      </ion-item>
+
+      <ion-item-options side="end" (click)="toggleSlider(slidingItem)">
+        <ion-item-option color="warning" (click)="editReport($event, report)" >
+          <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger" (click)="removeReport($event, report)" >
+          <ion-icon slot="icon-only" name="trash-bin"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+   </div>
+
+  <ion-fab
+    slot="fixed"
+    vertical="bottom"
+    horizontal="end">
+    <ion-fab-button (click)="addReport()" >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+  </ion-fab>
+
+
+  </ion-content>
+
+
+
+
+

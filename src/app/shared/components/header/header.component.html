@@ -1,0 +1,19 @@
+<ion-header >
+  <ion-toolbar [color]=headerColor>
+    <ion-title> {{headerTitle}} </ion-title>
+    <ion-buttons slot="start" *ngIf="modalMode">
+
+      <div class="close-button-container" (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </div>
+
+    </ion-buttons>
+
+
+    <ion-buttons slot="end" *ngIf="!modalMode">
+      <ion-button (click)="getDOCX()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
